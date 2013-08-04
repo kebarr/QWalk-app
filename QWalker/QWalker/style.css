@@ -1,0 +1,18 @@
+﻿
+/* style sheet to center everything on the page, except bit which specifies font */
+
+html, body {
+	font: 12pt serif;
+    }
+
+label { display: block; width: 150px; }
+
+div#container{ position: absolute;left: 35%; top:30%}
+div#graph{width: 600px; height: 300px; padding-top: 750px; clear:left}
+
+
+/*stops hyperlink being underlined*/
+A:link {text-decoration: none}
+A:visited {text-decoration: none}
+A:active {text-decoration: none}
+A:hover {text-decoration: underline; color: red;}
