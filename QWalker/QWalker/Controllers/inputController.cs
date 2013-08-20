@@ -34,12 +34,13 @@ namespace QWalker.Controllers
 
             }
         }
+
         public JsonResult Walk(InputModel model)
         {
             var returnedModel = new InputModel();
             if (Inputs.IsValid(model.Left) == false)
             {
-                returnedModel.ErrorMessage = "Left coin state value must be of form a, bi, a+bi, sqrt(a), sqrt(b)i or sqrt(a) + sqrt(b)i, default value sqrt(0.5) used for simulation";
+                returnedModel.ErrorMessage = "error";
 
 
                 return Json(returnedModel);
@@ -52,7 +53,7 @@ namespace QWalker.Controllers
 
             if (Inputs.IsValid(model.Right) == false)
             {
-                returnedModel.ErrorMessage = "Right coin state value must be of form a, bi, a+bi, sqrt(a), sqrt(b)i or sqrt(a) + sqrt(b)i, default value sqrt(0.5) used for simulation";
+                returnedModel.ErrorMessage = "error";
 
 
 
@@ -69,14 +70,15 @@ namespace QWalker.Controllers
             Complex rightInitial = Inputs.Convert(model.Right);
             if (qWalker.isNormalised(rightInitial, leftInitial) == false)
             {
-                // in this case need to notify user aND still run walk.
-                rightInitial = new Complex(0, Math.Sqrt(0.5));
-                leftInitial = new Complex(0, Math.Sqrt(0.5));
+                returnedModel.ErrorMessage = "error";
             }
-            var results = qWalker.runWalk(rightInitial, leftInitial);
-            SaveResults(results);
-
-            returnedModel.Results = results.Results;
+            else
+            {
+                var results = qWalker.runWalk(rightInitial, leftInitial);
+                SaveResults(results);
+                returnedModel.ErrorMessage = "fine";
+                returnedModel.Results = results.Results;
+            }
             return Json(returnedModel);
         }
 

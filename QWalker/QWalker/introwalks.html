@@ -1,0 +1,70 @@
+<html>
+
+<head>
+<title>Introduction to discrete time quantum walks</title>
+
+ <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+    <body>
+        
+        <div id ="outer">
+        <p> Discrete time quantum walks are analogues of
+classical random walks, which evolve in ways which are consistent with
+the laws of <a href="http://plato.stanford.edu/entries/qm/#PhySta">quantum mecahnics</a>. Roughly that means that their evolution
+is time reversible, or it doesn't matter what direction you run time
+            in, and classical notions such as <a href="http://en.wikipedia.org/wiki/Quantum_superposition">being in one place or state at a time</a>, or having <a href="http://plato.stanford.edu/entries/qt-uncertainty/">simultaneously defined momentum and position</a>, don't apply.
+            <a href="http://en.wikipedia.org/wiki/Random_walk"> Classical
+random walks </a>evolve accoring to two operations, a coin flip and a
+shift. The coin flip tells you whether to go left or right, usually
+with equal probability of either. The shift then moves you. Its the
+same for a <a href="http://en.wikipedia.org/wiki/Quantum_walk">
+quantum walk,</a> except the coin makes you go both left and right at the same
+time. The fact that you go a little bit left, and a little bit right,
+on each step of the walk (as shown in the image below), combined with interference, means that the
+quantum walk moves you along the line much faster than the classical
+random walk. This makes sense given that with a classical random walk,
+your expected position at every time step is exactly where you
+started!</p>
+
+<img src="linearcoins2.png" alt="First steps of the quantum walk on
+the line" width="500" height="504">
+
+<p>In fact, the walk on the line, the one I've shown you, is quite
+boring. And it was <a
+href="http://dl.acm.org/citation.cfm?id=380757">solved analytically </a>
+in 2001, which given the
+research communities justified preference for analytical rather than
+numerical results, makes simulating them quite pointless. More
+interestingly, you can define quantum walks over arbitrary structures,
+such as these:</p>
+
+<img src="examplegraphs.png" alt="First steps of the quantum walk on
+the line" width="604" height="130">
+
+<p>There are two main threads to research into discrete time quantum
+walks, looking at transport properties-where they go, and how fast-
+and their algorithmic applications. In fact, their good transport
+properties are taken advantage of in <a href = "http://arxiv.org/abs/quantph/0403120">algorithmic applications</a>, so we
+can basically boil it down to one application. <a href = "http://arxiv.org/abs/0910.1024">Any algorithm can be
+computed by a discrete time quantum walk, as they are computationally
+universal,</a> hence they are considered computational 
+primitives. That means that the can perform any quantum computation to
+arbitrary precision. This was shown by using them to simulate <a href
+= "http://en.wikipedia.org/wiki/Quantum_circuit ">quantum
+circuits.</a> More recently, <a href = "http://arxiv.org/abs/1209.5238">I used them to solve language
+recognition problems. </a> </p>
+
+<p><b>Disclaimer: this is a horribly imprecise and swift introduction to
+discrete time quantum walks. This is on the basis that I don't think
+lay people want to know what a state vector is or are too bothered
+about how to guarantee unitarity. If you are bothered, please consult
+<a href = "http://arxiv.org/abs/1204.5937">any research paper with a
+decent introduction to quantum walks.</a> If you're really really
+bothered, apply for a PhD in quantum information. It will be the best
+and worst four years of your life. For a general introduction to quantum information theory, <a href="http://www.quantiki.org/wiki/Main_Page">quantiki</a> is great</b></p>
+
+</div>
+</body>
+
+</html>

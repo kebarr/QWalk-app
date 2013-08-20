@@ -9,7 +9,7 @@
 <script type="text/javascript"
 
 src="http://code.jquery.com/jquery-latest.min.js"> </script>
-<script language="javascript" type="text/javascript" src="jquery.flot.js"></script>
+    <script language="javascript" type="text/javascript" src="jquery.flot.js"></script>
     <script src = "myscript.js"></script>
     
     <title>Run a discrete time quantum walk</title>
@@ -21,7 +21,7 @@ src="http://code.jquery.com/jquery-latest.min.js"> </script>
     <div id ="instructions"></div>
     <div id ="container"><div id ="aligned">
                              
-                           <p id="thing">Select the initial condition for the walk you would like to run.</p>        
+                           <p id="thing">Select the initial condition for the walk you would like to run</p>        
                              <table>
                                  <tr>
                                      <td>
@@ -40,13 +40,16 @@ src="http://code.jquery.com/jquery-latest.min.js"> </script>
                                      </td>
                                  </tr>
                              </table>
-                             <button id="runWalk">Click to run walk</button> <br>
+                             <button id="runWalk">Click to run walk</button> <button id="runWalk2" class ="hidden">Click to run walk and plot on new graph</button> 
                          </div>
-    <p id="test"> </p> <br>
 
-    <!-- now need to add graph... -->
-    <div id="graph"></div></div>
+        <!-- now need to add graph... -->
+        <div id="graphlabel" class ="hidden"><p>Probability distribution after 50 time steps, starting at position 0</p></div>
+        <div id="graph"></div><div id = "xaxis" class="hidden">Position</div>
 
+        <!-- want this to be hidden until graph comes up-->
+        </div>
+        <div id="link"><a href="/introwalks.html">Want to know more <br> about quantum walks?</a></div>
 
 
 </body>

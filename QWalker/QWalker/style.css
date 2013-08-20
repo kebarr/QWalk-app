@@ -7,12 +7,18 @@ html, body {
 
 label { display: block; width: 150px; }
 
-div#container{ position: absolute;left: 35%; top:30%}
+div#container{ position: absolute;left: 33%; top:22%}
 div#graph{width: 600px; height: 300px; padding-top: 750px; clear:left}
+div#link{ position: absolute;left: 80%;top: 90%; text-align: center}
+div#xaxis{position: absolute; left: 45%}
+div#outer{  width: 900px ; margin-left: auto ; margin-right: auto ; padding-top: 30px}
+div.hidden{visibility: hidden}
+button.hidden{visibility: hidden}
+img{display: block;margin-left: auto;  margin-right: auto }
 
 
 /*stops hyperlink being underlined*/
-A:link {text-decoration: none}
-A:visited {text-decoration: none}
-A:active {text-decoration: none}
-A:hover {text-decoration: underline; color: red;}
+A:link {text-decoration: none;font-style: italic; color:black}
+A:visited { text-decoration: none; color:black}
+A:active { text-decoration: none; color:black}
+A:hover { text-decoration: underline; color:black}

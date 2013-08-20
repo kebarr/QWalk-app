@@ -137,11 +137,14 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="examplegraphs.png" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
     <Content Include="JavaScript1.js" />
+    <Content Include="linearcoins2.png" />
     <Content Include="myscript.js" />
     <Content Include="style.css" />
+    <Content Include="introwalks.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
