@@ -85,7 +85,7 @@ namespace QWalker.Controllers
 
         private void SaveResults(WalkResults results)
         {
-            var store = new DocumentStore { ConnectionStringName = "RavenServer" };
+            var store = new DocumentStore { ConnectionStringName = "RavenDB" };
             store.Initialize();
 
 
