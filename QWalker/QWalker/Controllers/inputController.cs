@@ -21,19 +21,19 @@ namespace QWalker.Controllers
         }
 
 
-        public JsonResult SearchByDate(DateTime date)
-        {
-            var store = new DocumentStore { ConnectionStringName = "RavenServer" };
-            store.Initialize();
+        //public JsonResult SearchByDate(DateTime date)
+        //{
+        //    var store = new DocumentStore { ConnectionStringName = "RavenServer" };
+        //    store.Initialize();
 
 
-            using (var session = store.OpenSession())
-            {
+        //    using (var session = store.OpenSession())
+        //    {
 
-                return Json(session.Query<WalkResults>().Where(result => result.DateRun > date).ToList());
+        //        return Json(session.Query<WalkResults>().Where(result => result.DateRun > date).ToList());
 
-            }
-        }
+        //    }
+        //}
 
         public JsonResult Walk(InputModel model)
         {
@@ -75,7 +75,7 @@ namespace QWalker.Controllers
             else
             {
                 var results = qWalker.runWalk(rightInitial, leftInitial);
-                SaveResults(results);
+                //SaveResults(results);
                 returnedModel.ErrorMessage = "fine";
                 returnedModel.Results = results.Results;
             }
@@ -83,19 +83,19 @@ namespace QWalker.Controllers
         }
 
 
-        private void SaveResults(WalkResults results)
-        {
-            var store = new DocumentStore { ConnectionStringName = "RavenDB" };
-            store.Initialize();
+        //private void SaveResults(WalkResults results)
+        //{
+        //    var store = new DocumentStore { ConnectionStringName = "RavenDB" };
+        //    store.Initialize();
 
 
-            using (var session = store.OpenSession())
-            {
-                session.Store(results);
-                session.Query<WalkResults>().Where(result => result.DateRun > DateTime.Parse("28/6/2013")).ToList();
-                session.SaveChanges();
-            }
-        }
+        //    using (var session = store.OpenSession())
+        //    {
+        //        session.Store(results);
+        //        session.Query<WalkResults>().Where(result => result.DateRun > DateTime.Parse("28/6/2013")).ToList();
+        //        session.SaveChanges();
+        //    }
+        //}
         // GET api/<controller>
         public IEnumerable<string> Get()
         {
